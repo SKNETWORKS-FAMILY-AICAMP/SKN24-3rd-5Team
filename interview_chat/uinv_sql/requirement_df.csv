@@ -1,0 +1,68 @@
+name,type,metric_type,require,value,notes
+New York University,TOEFL,Competitive Score,Conditionally Required,100,"No strict minimum, but this is the competitive score."
+New York University,IELTS,Competitive Score,Conditionally Required,7.5,"No strict minimum, but this is the competitive score."
+New York University,Duolingo,Competitive Score,Conditionally Required,135,"No strict minimum, but this is the competitive score."
+New York University,PTE,Competitive Score,Conditionally Required,70,"No strict minimum, but this is the competitive score."
+New York University,Cambridge English,Competitive Score,Conditionally Required,191,"No strict minimum, but this is the competitive score."
+New York University,iTEP,Competitive Score,Conditionally Required,4.5,"No strict minimum, but this is the competitive score."
+University of Southern California,Common Application,N/A,Required,N/A,Completed application form is required.
+University of Southern California,Official Test Scores,N/A,Optional,N/A,"For applicants who choose to submit test scores, they will be considered alongside other academic information."
+University of Southern California,Transcripts,N/A,Required,N/A,Official transcripts from all secondary or senior secondary schools must be provided.
+University of Southern California,Letter of Recommendation,N/A,Required,N/A,A letter from a recommender is required.
+University of Southern California,TOEFL,Minimum Score,Conditionally Required,100,"Minimum score of 100 on the TOEFL, with no less than 20 in each section for tests taken before January 21, 2026."
+University of Southern California,IELTS,Minimum Score,Conditionally Required,7,Minimum score of 7 on the IELTS.
+University of Southern California,C1 Advanced (Cambridge English Qualification),Minimum Score,Conditionally Required,185,"Overall score of 185 or above, with at least 169 on each skill."
+University of Southern California,PTE,Minimum Score,Conditionally Required,68,Minimum score of 68 on the PTE.
+University of Southern California,Duolingo,Minimum Score,Conditionally Required,130,Minimum score of 130 on the Duolingo English Test.
+University of Illinois Urbana-Champaign,ACT/SAT,N/A,Optional,N/A,"Neither test is preferred, but they are used in decision-making."
+University of Illinois Urbana-Champaign,TOEFL,Competitive Score,Conditionally Required,105,"No strict minimum, but this is the competitive score."
+University of Illinois Urbana-Champaign,IELTS,Competitive Score,Conditionally Required,7.5,"No strict minimum, but this is the competitive score."
+University of Illinois Urbana-Champaign,Duolingo,Competitive Score,Conditionally Required,135,"No strict minimum, but this is the competitive score."
+Columbia University,TOEFL,Competitive Score,Conditionally Required,100,"No strict minimum, but this is the competitive score."
+Columbia University,IELTS,Competitive Score,Conditionally Required,7.5,"No strict minimum, but this is the competitive score."
+Columbia University,Duolingo,Competitive Score,Conditionally Required,125,"No strict minimum, but this is the competitive score."
+Columbia University,Cambridge English,Competitive Score,Conditionally Required,191,"No strict minimum, but this is the competitive score."
+Columbia University,iTEP,Competitive Score,Conditionally Required,4.5,"No strict minimum, but this is the competitive score."
+Columbia University,SAT/ACT,N/A,Optional,N/A,Not required but may be submitted for context.
+Columbia University,Transcript,N/A,Required,N/A,Official high school transcript is required.
+Columbia University,Essay,N/A,Required,N/A,Personal essay is required as part of the application.
+"University of California, Los Angeles",TOEFL,Competitive Score,Conditionally Required,100,"A score of 100 or above on the 120-point scale is competitive, with sub-scores above 24 required."
+"University of California, Los Angeles",IELTS,Competitive Score,Conditionally Required,7.5,A score of 7.5 or above on the IELTS is competitive.
+"University of California, Los Angeles",Duolingo,Competitive Score,Conditionally Required,135,A score of 135 or higher on the Duolingo English Test is competitive.
+"University of California, Los Angeles",SAT/ACT,N/A,Optional,N/A,UCLA will not consider SAT or ACT scores for admission or scholarship purposes.
+"University of California, Los Angeles",Transcript,Quantity required,Required,N/A,Secondary school records and official records from colleges or universities attended are required.
+"University of California, Los Angeles",English-as-a-Second-Language Placement Examination (ESLPE),N/A,Conditionally Required,N/A,Required for admitted students whose native language is not English to assess English proficiency.
+Boston University,Common Application,N/A,Required,N/A,Submitted as part of the application.
+Boston University,High School Transcript,N/A,Required,N/A,Must be official copies submitted by a school official.
+Boston University,Senior Year Grades,N/A,Required,N/A,Must be submitted when available according to the decision timeframe.
+Boston University,Counselor Recommendation,N/A,Required,N/A,Must include the School Report form.
+Boston University,Teacher Evaluation,N/A,Required,N/A,Must be submitted by a teacher.
+Boston University,Standardized Tests,N/A,Optional,N/A,BU is test optional for first-year applicants until spring 2029.
+Boston University,TOEFL,Competitive Score,Conditionally Required,90,"If English is not the applicant's first language, competitive total score is 90-100, with at least 20 in each section."
+Boston University,IELTS,Competitive Score,Conditionally Required,7,A total score of 7 or higher is required.
+Boston University,Duolingo,Competitive Score,Conditionally Required,125,Competitive total score for the Duolingo English Test is 125-135.
+"University of California, Berkeley",Transcript,Quantity required,Required,N/A,Applicants must self-report their grades honestly and accurately.
+"University of California, Berkeley",Letters of Recommendation,Quantity required,Optional,2,Select applicants may be invited to submit up to two letters of recommendation.
+"University of California, Berkeley",TOEFL,Competitive Score,Conditionally Required,100,Competitive score for non-native English speakers.
+"University of California, Berkeley",IELTS,Competitive Score,Conditionally Required,7.0,Overall band score is considered for non-native English speakers.
+"University of California, Berkeley",Duolingo,Competitive Score,Conditionally Required,120,Acceptable alternative for non-native English speakers.
+"University of California, Berkeley",PTE,Competitive Score,Conditionally Required,68,Alternative English test required for non-native speakers.
+"University of California, Berkeley",Cambridge English,Competitive Score,Conditionally Required,N/A,"Scores accepted, specific scores not listed."
+"University of California, Berkeley",iTEP,Competitive Score,Conditionally Required,N/A,"Scores accepted, specific scores not listed."
+"University of California, San Diego",TOEFL,Minimum Score,Conditionally Required,83,Minimum score required for TOEFL.
+"University of California, San Diego",IELTS,Minimum Score,Conditionally Required,7,Minimum score required for IELTS.
+"University of California, San Diego",Duolingo,Minimum Score,Conditionally Required,115,Minimum score required for Duolingo.
+"University of California, San Diego",GPA,Minimum GPA,Required,3.0,California residents must earn a GPA of 3.0 (or better) with no grade lower than 'C'. Non-California residents must earn a GPA of 3.4 (or better) with no grade lower than 'C'.
+"University of California, San Diego",High School Diploma,Quantity required,Required,1,Must have completed secondary school with a superior average in academic subjects.
+Purdue University,SAT,Minimum Score,Required,600,Minimum score required for the Evidence-based Reading and Writing section.
+Purdue University,ACT,Minimum Score,Required,26,Minimum score required on the English section.
+Purdue University,TOEFL,Minimum Score,Conditionally Required,88,"Minimum score for exams taken before January 21, 2026."
+Purdue University,TOEFL,Minimum Score,Conditionally Required,4.5,"Minimum score for exams taken on or after January 21, 2026."
+Purdue University,IELTS,Minimum Score,Conditionally Required,6.5,"Minimum score required, with at least 6.0 in each section."
+Purdue University,Duolingo,Minimum Score,Conditionally Required,115,"Generally, applicants have a 110 or higher in all individual subscores."
+The Pennsylvania State University,TOEFL,Competitive Score,Conditionally Required,80,"No strict minimum, but this is the competitive score."
+The Pennsylvania State University,IELTS,Competitive Score,Conditionally Required,6.5,"No strict minimum, but this is the competitive score."
+The Pennsylvania State University,Duolingo,Competitive Score,Conditionally Required,105,"No strict minimum, but this is the competitive score."
+The Pennsylvania State University,PTE,Competitive Score,Conditionally Required,53,"No strict minimum, but this is the competitive score."
+The Pennsylvania State University,Cambridge English,Competitive Score,Conditionally Required,169,"No strict minimum, but this is the competitive score."
+The Pennsylvania State University,iTEP,Competitive Score,Conditionally Required,3.7,"No strict minimum, but this is the competitive score."
