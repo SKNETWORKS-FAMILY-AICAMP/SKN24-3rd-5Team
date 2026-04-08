@@ -1,0 +1,164 @@
+1. SQL - Server → Data Export → universirydb.sql 추출
+✅ Dump Structure and Data
+✅ Include Create Schema
+
+
+
+
+User Question
+   ↓
+LangGraph (workflow)
+   ↓
+Agent (LLM + SQL Tool)
+   ↓
+DB (MySQL)
+
+myproject/
+│
+├── env                <- 환경변수 파일 (DB 계정 정보)
+├── universirydb.sql   <- export한 DB 덤프
+├── db/
+│   └── query_connection.py
+├── agent/
+│   └── sql_agent.py
+
+3차프로젝트 폴더/
+│
+├── app/
+│   ├── main.py              ⭐ 실행 진입점
+│
+├── db/
+│   ├── connection.py       ⭐ DB 연결
+│
+├── llm/
+│   ├── ollama.py           ⭐ LLM 연결
+│
+├── agent/
+│   ├── sql_agent.py        ⭐ Agent 생성
+│
+├── graph/
+│   ├── workflow.py         ⭐ LangGraph
+│
+├── .env                    ⭐ 환경변수
+├── requirements.txt
+
+- env 파일생성해서 키붙이기 
+**** env (그냥 세글자파일) 
+DB_USER=myuser
+DB_PASSWORD=123
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=universitydb
+
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=ebdm/gemma3-enhanced:12b
+
+
+
+GPU는 RTX 3090 (24GB) , A40 이상 선택.
+
+시스템 RAM은 무조건 32GB 이상 확보.
+
+모델 체급을 8B 이하로 낮추거나, 꼭 큰 모델을 써야 한다면 OLLAMA_KEEP_ALIVE=0s 설정을 통해 메모리를 바로 비워줄 것.
+- DISK 무조건 50이상 / 권장 (100GB)
+
+<쥬피터맨위에 선언해주기> ⭐⭐⭐⭐⭐⭐
+# !pip install langchain langchain-community sqlalchemy pymysql
+# !pip install langchain_ollama
+# !pip install langchain langchain-community langgraph langchain-ollama sqlalchemy pymysql python-dotenv
+import os
+os.chdir("/workspace/3차프로젝트")
+
+<터미널>
+*sql 설치 
+apt update
+apt install -y mysql-server mysql-client
+
+
+\시작
+service mysql start
+mysql -u root -p  --> 패스워드 입력 123
+CREATE DATABASE universitydb;
+
+<터미널>
+exit; (mysql나가기)
+
+* sql파일 붙이기
+mysql -u root -p universitydb < /workspace/project/universitydb.sql
+* 계정 로그인
+mysql -u root -p 
+
+
+<터미널로 잘 붙었는지 확인>
+USE universitydb;
+SHOW TABLES;
+DESCRIBE school_info;
+
+
+<MySQL 계정 생성 및 권한 설정 - runpod - mysql - terminal>
+CREATE USER 'myuser'@'%' IDENTIFIED BY '123';
+GRANT ALL PRIVILEGES ON universitydb.* TO 'myuser'@'%';
+FLUSH PRIVILEGES;
+
+
+<쥬피터 확인>
+from db.query_connection import get_db
+db = get_db()
+print(db.get_usable_table_names())
+
+<터미널 - 올라마 설치>
+curl -fsSL https://ollama.com/install.sh | sh
+ollama serve
+--- 새터미널 열기(위에 올라마 서버는 켜놓고)
+ollama list
+ollama pull ebdm/gemma3-enhanced:12b
+ollama pull llama3:8b
+
+<런팟 주피터 파일 초기화>
+rm -rf /workspace/*
+
+
+<터미널에 오디오 패키지 설치>
+# 1. 패키지 리스트 업데이트
+apt-get update
+
+# 2. PortAudio 개발용 헤더 파일 설치 (반드시 필요)
+apt-get install -y portaudio19-dev python3-dev gcc
+
+# 3. PyAudio 재설치
+pip install pyaudio
+
+
+3만약 Connect에 8501 링크가 없다면?
+아까 설정하신 8501, 8888 설정이 저장되었는지 확인해야 합니다.
+
+다시 점 세 개(⋮) -> Edit Pod에 들어가서 Expose HTTP Ports 칸에 8501, 8888이 제대로 적혀 있는지 확인하고 Update를 눌러주세요.
+
+업데이트 후 Connect 탭에 링크가 생기면 그걸 누르시면 됩니다.
+
+8501, 8888
+
+
+cd /workspace/project  # project는 새로 바꾼 폴더 이름
+ls
+
+
+
+
+
+# 1. 시스템 라이브러리 (STT용) 설치 여부 확인
+apt-get update && apt-get install -y ffmpeg
+
+# 2. 실행
+python3 -m streamlit run streamlit2.py --server.port 8501 --server.address 0.0.0.0
+streamlit run streamlit2.py --server.port 8501 --server.address 0.0.0.0 --server.enableCORS false --server.enableXsrfProtection false
+
+
+
+터미널에서 라이브러리 설치: 
+
+pip install streamlit-mic-recorder
+
+streamlit_run.py 상단에 추가: from streamlit_mic_recorder import mic_recorder
+
+st.chat_input 대신 녹음 버튼을 배치하여 음성 데이터를 서버로 전송합니다.
