@@ -18,7 +18,7 @@ CREATE TABLE `school_info` (
 CREATE TABLE `admission_info` (
  `admission_id` INT AUTO_INCREMENT COMMENT '입시 지원 코드',
  `school_id` INT NOT NULL COMMENT '학교 코드',
- `tunition` INT NULL COMMENT '학비',
+ `tuition` INT NULL COMMENT '학비',
  `regular_deadline_date` DATE NULL COMMENT '정규학기 마감일자',
  `early_deadline_date` DATE NULL COMMENT '조기지원 마감일자',
  PRIMARY KEY(`admission_id`),
