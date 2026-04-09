@@ -1,0 +1,62 @@
+[
+    {
+        "school_code": "NYU",
+        "name": "New York University",
+        "country": "USA",
+        "address": "New York, NY"
+    },
+    {
+        "school_code": "USC",
+        "name": "University of Southern California",
+        "country": "United States",
+        "address": "Los Angeles, California"
+    },
+    {
+        "school_code": "UIUC",
+        "name": "University of Illinois Urbana-Champaign",
+        "country": "United States",
+        "address": "Urbana, IL 61801"
+    },
+    {
+        "school_code": "Columbia",
+        "name": "Columbia University",
+        "country": "USA",
+        "address": "New York, NY"
+    },
+    {
+        "school_code": "UCLA",
+        "name": "University of California, Los Angeles",
+        "country": "USA",
+        "address": "Los Angeles, CA"
+    },
+    {
+        "school_code": "BU",
+        "name": "Boston University",
+        "country": "United States",
+        "address": "Boston, MA"
+    },
+    {
+        "school_code": "UCBerkeley",
+        "name": "University of California, Berkeley",
+        "country": "USA",
+        "address": "Berkeley, CA"
+    },
+    {
+        "school_code": "UCSD",
+        "name": "University of California, San Diego",
+        "country": "USA",
+        "address": "La Jolla, CA"
+    },
+    {
+        "school_code": "Purdue",
+        "name": "Purdue University",
+        "country": "USA",
+        "address": "West Lafayette, IN"
+    },
+    {
+        "school_code": "PennState",
+        "name": "The Pennsylvania State University",
+        "country": "USA",
+        "address": "201 Old Main, University Park, PA 16802"
+    }
+]

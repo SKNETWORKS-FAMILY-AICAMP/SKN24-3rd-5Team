@@ -1,0 +1,668 @@
+[
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "100",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "NYU_REQ_1",
+        "school_code": "NYU"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "7.5",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "NYU_REQ_2",
+        "school_code": "NYU"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "120",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "NYU_REQ_3",
+        "school_code": "NYU"
+    },
+    {
+        "document_type": "PTE",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "70",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "NYU_REQ_4",
+        "school_code": "NYU"
+    },
+    {
+        "document_type": "Cambridge English",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "191",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "NYU_REQ_5",
+        "school_code": "NYU"
+    },
+    {
+        "document_type": "iTEP",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "4.5",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "NYU_REQ_6",
+        "school_code": "NYU"
+    },
+    {
+        "document_type": "Common Application",
+        "requirement_policy": "Required",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "The Common Application is mandatory for all applicants.",
+        "requirement_id": "USC_REQ_1",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "Official Test Scores (SAT/ACT)",
+        "requirement_policy": "Optional",
+        "metric_name": "Minimum Score",
+        "metric_value": "N/A",
+        "notes": "While test scores are optional, they can be submitted for consideration.",
+        "requirement_id": "USC_REQ_2",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "Transcript",
+        "requirement_policy": "Required",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "Must provide official academic records.",
+        "requirement_id": "USC_REQ_3",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "Letter of Recommendation",
+        "requirement_policy": "Required",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "A letter of recommendation is necessary for admission.",
+        "requirement_id": "USC_REQ_4",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "100",
+        "notes": "Minimum of 100 overall with no less than 20 in each section, for scores taken prior to January 21, 2026.",
+        "requirement_id": "USC_REQ_5",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "7",
+        "notes": "Minimum score of 7.0.",
+        "requirement_id": "USC_REQ_6",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "130",
+        "notes": "Minimum score for Duolingo English Test.",
+        "requirement_id": "USC_REQ_7",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "PTE",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "68",
+        "notes": "Score must be 68 or above.",
+        "requirement_id": "USC_REQ_8",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "Cambridge English",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "185",
+        "notes": "Overall score of 185 or above with at least 169 on each skill.",
+        "requirement_id": "USC_REQ_9",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "iTEP",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "N/A",
+        "notes": "Accepted, but no minimum score specified.",
+        "requirement_id": "USC_REQ_10",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "Financial Statement of Personal or Family Support",
+        "requirement_policy": "Required",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "Must provide proof of ability to pay for tuition and living expenses.",
+        "requirement_id": "USC_REQ_11",
+        "school_code": "USC"
+    },
+    {
+        "document_type": "ACT/SAT",
+        "requirement_policy": "Optional",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "ACT or SAT scores are optional but provided scores will be used for decision-making and advising.",
+        "requirement_id": "UIUC_REQ_1",
+        "school_code": "UIUC"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "105",
+        "notes": "Scores between 105-112 are competitive, no strict minimum is mentioned.",
+        "requirement_id": "UIUC_REQ_2",
+        "school_code": "UIUC"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "7.5",
+        "notes": "Typical admission scores range from 7.5 to 8 with at least 6 on all modules.",
+        "requirement_id": "UIUC_REQ_3",
+        "school_code": "UIUC"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "135",
+        "notes": "Competitive scores range from 135 to 145.",
+        "requirement_id": "UIUC_REQ_4",
+        "school_code": "UIUC"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "N/A",
+        "notes": "No strict minimum, but competitive scores are expected.",
+        "requirement_id": "Columbia_REQ_1",
+        "school_code": "Columbia"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "N/A",
+        "notes": "No strict minimum, but competitive scores are expected.",
+        "requirement_id": "Columbia_REQ_2",
+        "school_code": "Columbia"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "N/A",
+        "notes": "No strict minimum, but competitive scores are expected.",
+        "requirement_id": "Columbia_REQ_3",
+        "school_code": "Columbia"
+    },
+    {
+        "document_type": "Cambridge English",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "N/A",
+        "notes": "No strict minimum, but competitive scores are expected.",
+        "requirement_id": "Columbia_REQ_4",
+        "school_code": "Columbia"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "100",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "UCLA_REQ_1",
+        "school_code": "UCLA"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "7.5",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "UCLA_REQ_2",
+        "school_code": "UCLA"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "135",
+        "notes": "No strict minimum, but this is the competitive score.",
+        "requirement_id": "UCLA_REQ_3",
+        "school_code": "UCLA"
+    },
+    {
+        "document_type": "Transcript",
+        "requirement_policy": "Required",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "Official records from secondary and any post-secondary institutions must be submitted.",
+        "requirement_id": "UCLA_REQ_4",
+        "school_code": "UCLA"
+    },
+    {
+        "document_type": "Recommendation Letter",
+        "requirement_policy": "Optional",
+        "metric_name": "Quantity required",
+        "metric_value": "N/A",
+        "notes": "Not explicitly required.",
+        "requirement_id": "UCLA_REQ_5",
+        "school_code": "UCLA"
+    },
+    {
+        "document_type": "Common Application or QuestBridge Application",
+        "requirement_policy": "Required",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "Applicants must submit either of these applications.",
+        "requirement_id": "BU_REQ_1",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "High School Transcript",
+        "requirement_policy": "Required",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "Official copies must be submitted by a school official.",
+        "requirement_id": "BU_REQ_2",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "Senior Year Grades",
+        "requirement_policy": "Required",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "First marking period grades must be submitted.",
+        "requirement_id": "BU_REQ_3",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "Counselor Recommendation and School Report Form",
+        "requirement_policy": "Required",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "Must be submitted by a counselor.",
+        "requirement_id": "BU_REQ_4",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "Teacher Evaluation",
+        "requirement_policy": "Required",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "Must be submitted by a teacher.",
+        "requirement_id": "BU_REQ_5",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "90-100",
+        "notes": "Students who are most competitive for admission will have a composite score of at least 90-100.",
+        "requirement_id": "BU_REQ_6",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "7",
+        "notes": "A score of 7 or higher satisfies BU's English Language proficiency requirement.",
+        "requirement_id": "BU_REQ_7",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "125-135",
+        "notes": "Most competitive students will have a total score of at least 125-135.",
+        "requirement_id": "BU_REQ_8",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "Standardized Tests",
+        "requirement_policy": "Optional",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "Standardized tests are optional for first-year applicants.",
+        "requirement_id": "BU_REQ_9",
+        "school_code": "BU"
+    },
+    {
+        "document_type": "Transcript",
+        "requirement_policy": "Required",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "Applicants are expected to self-report their grades from their transcripts.",
+        "requirement_id": "UCBerkeley_REQ_1",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "SAT/ACT",
+        "requirement_policy": "Test-Free",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "SAT/ACT scores will not be used for admission, though they may be used for placement if submitted.",
+        "requirement_id": "UCBerkeley_REQ_2",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "Letters of Recommendation",
+        "requirement_policy": "Optional",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "Voluntarily submitted by select students; not required for full consideration.",
+        "requirement_id": "UCBerkeley_REQ_3",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "100",
+        "notes": "Aiming for 100 is competitive for non-native speakers.",
+        "requirement_id": "UCBerkeley_REQ_4",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "7.5",
+        "notes": "Aiming for 7.5 is competitive for non-native speakers.",
+        "requirement_id": "UCBerkeley_REQ_5",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "135",
+        "notes": "Aiming for a score of 135 is competitive for non-native speakers.",
+        "requirement_id": "UCBerkeley_REQ_6",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "PTE",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "70",
+        "notes": "Aiming for a score of 70 is competitive for non-native speakers.",
+        "requirement_id": "UCBerkeley_REQ_7",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "Cambridge English",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "191",
+        "notes": "Aiming for a score of 191 is competitive for non-native speakers.",
+        "requirement_id": "UCBerkeley_REQ_8",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "iTEP",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "N/A",
+        "notes": "Score requirements for iTEP not specified; must be verified.",
+        "requirement_id": "UCBerkeley_REQ_9",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "83",
+        "notes": "TOEFL scores are required for non-native speakers from countries where English is not the language of instruction.",
+        "requirement_id": "UCSD_REQ_1",
+        "school_code": "UCSD"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "7",
+        "notes": "IELTS scores are required for non-native speakers from countries where English is not the language of instruction.",
+        "requirement_id": "UCSD_REQ_2",
+        "school_code": "UCSD"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "115",
+        "notes": "Duolingo English Test scores are required for non-native speakers.",
+        "requirement_id": "UCSD_REQ_3",
+        "school_code": "UCSD"
+    },
+    {
+        "document_type": "Recommendation Letter",
+        "requirement_policy": "Optional",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "Applicants may include recommendation letters to strengthen their application.",
+        "requirement_id": "UCSD_REQ_4",
+        "school_code": "UCSD"
+    },
+    {
+        "document_type": "Personal Insight Questions",
+        "requirement_policy": "Required",
+        "metric_name": "Quantity required",
+        "metric_value": "4",
+        "notes": "Applicants must answer 4 out of 8 personal insight questions, each with a limit of 350 words.",
+        "requirement_id": "UCSD_REQ_5",
+        "school_code": "UCSD"
+    },
+    {
+        "document_type": "Portfolio",
+        "requirement_policy": "Optional",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "A portfolio review is required for students applying to certain majors in the Arts.",
+        "requirement_id": "UCSD_REQ_6",
+        "school_code": "UCSD"
+    },
+    {
+        "document_type": "SAT",
+        "requirement_policy": "Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "600",
+        "notes": "Minimum score required on the Evidence-based Reading and Writing (EBRW) section.",
+        "requirement_id": "Purdue_REQ_1",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "ACT",
+        "requirement_policy": "Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "26",
+        "notes": "Minimum score required on the English section.",
+        "requirement_id": "Purdue_REQ_2",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "88",
+        "notes": "Minimum TOEFL iBT score with at least 20 in each section for exams taken before Jan 21, 2026.",
+        "requirement_id": "Purdue_REQ_3",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "4.5",
+        "notes": "Minimum TOEFL iBT score with at least 4.0 in each section for exams taken on or after Jan 21, 2026.",
+        "requirement_id": "Purdue_REQ_4",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "6.5",
+        "notes": "Minimum score with no section below 6.0.",
+        "requirement_id": "Purdue_REQ_5",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Minimum Score",
+        "metric_value": "115",
+        "notes": "Minimum score with no individual subscores below 110.",
+        "requirement_id": "Purdue_REQ_6",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "PTE",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "N/A",
+        "notes": "Pearson Test of English is accepted, but scores are not specified.",
+        "requirement_id": "Purdue_REQ_7",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "Cambridge English",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "N/A",
+        "notes": "Cambridge English scores are accepted, but scores are not specified.",
+        "requirement_id": "Purdue_REQ_8",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "iTEP",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "N/A",
+        "notes": "iTEP scores are accepted, but scores are not specified.",
+        "requirement_id": "Purdue_REQ_9",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "Application Essay",
+        "requirement_policy": "Required",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "A Common App essay is required.",
+        "requirement_id": "Purdue_REQ_10",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "Self-reported Transcripts",
+        "requirement_policy": "Required",
+        "metric_name": "Quantity required",
+        "metric_value": "1",
+        "notes": "Self-reported high school grades must be submitted.",
+        "requirement_id": "Purdue_REQ_11",
+        "school_code": "Purdue"
+    },
+    {
+        "document_type": "High School Transcripts",
+        "requirement_policy": "Required",
+        "metric_name": "N/A",
+        "metric_value": "N/A",
+        "notes": "Official high school transcripts must be sent directly to Penn State.",
+        "requirement_id": "PennState_REQ_1",
+        "school_code": "PennState"
+    },
+    {
+        "document_type": "SAT",
+        "requirement_policy": "Optional",
+        "metric_name": "Minimum Score",
+        "metric_value": "1330",
+        "notes": "Middle 50% SAT score for University Park.",
+        "requirement_id": "PennState_REQ_2",
+        "school_code": "PennState"
+    },
+    {
+        "document_type": "ACT",
+        "requirement_policy": "Optional",
+        "metric_name": "Minimum Score",
+        "metric_value": "30",
+        "notes": "Middle 50% ACT score for University Park.",
+        "requirement_id": "PennState_REQ_3",
+        "school_code": "PennState"
+    },
+    {
+        "document_type": "TOEFL",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "80",
+        "notes": "Non-native English speakers need to submit proof of English proficiency.",
+        "requirement_id": "PennState_REQ_4",
+        "school_code": "PennState"
+    },
+    {
+        "document_type": "IELTS",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "6.5",
+        "notes": "Non-native English speakers need to submit proof of English proficiency.",
+        "requirement_id": "PennState_REQ_5",
+        "school_code": "PennState"
+    },
+    {
+        "document_type": "Duolingo",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "105",
+        "notes": "Non-native English speakers need to submit proof of English proficiency.",
+        "requirement_id": "PennState_REQ_6",
+        "school_code": "PennState"
+    },
+    {
+        "document_type": "PTE",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "54",
+        "notes": "Non-native English speakers need to submit proof of English proficiency.",
+        "requirement_id": "PennState_REQ_7",
+        "school_code": "PennState"
+    },
+    {
+        "document_type": "Cambridge English",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "169",
+        "notes": "Non-native English speakers need to submit proof of English proficiency.",
+        "requirement_id": "PennState_REQ_8",
+        "school_code": "PennState"
+    },
+    {
+        "document_type": "iTEP",
+        "requirement_policy": "Conditionally Required",
+        "metric_name": "Competitive Score",
+        "metric_value": "4.5",
+        "notes": "Non-native English speakers need to submit proof of English proficiency.",
+        "requirement_id": "PennState_REQ_9",
+        "school_code": "PennState"
+    }
+]
