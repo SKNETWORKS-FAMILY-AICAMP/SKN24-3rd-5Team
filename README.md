@@ -344,7 +344,7 @@ RAG 및 데이터 추출 성능: 펜실베니아 대학교의 학비($81,990)와
 전체 흐름 : START → list_tables → call_get_schema → get_schema → generate_query → check_query → run_query → [성공: generate_answer → END] / [실패: retry_query → run_query]
 
 ### ☑️개선방안: 2. (서비스2: 비자인터뷰 챗봇) STT, TTS를 활용한 VISA 인터뷰어 평가 적용
-
+향후 인터뷰를 위해 보다 현실적인 환경을 모방하기 위해 STT와 TTS를 추가했습니다. STT와 TTS는 사용자가 답변 녹음에 대한 평가를 받을 때 평가 프롬프트의 일부였습니다. 녹음을 분석하기 위해 librosa라는 라이브러리를 사용했습니다. librosa 덕분에 모델은 일시 정지, 즉 모델이 인터뷰어를 평가하는 데 사용한 볼륨을 평가할 수 있었습니다.
 
 
 ### ☑️개선방안: 3. (멀티에이전트) 통일된 모델을 활용한 루트 노드 생성 후 서비스 분류
