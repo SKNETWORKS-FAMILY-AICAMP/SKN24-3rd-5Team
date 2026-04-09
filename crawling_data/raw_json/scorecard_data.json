@@ -1,0 +1,122 @@
+[
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": 600,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": 640,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": 690,
+    "latest.admissions.sat_scores.25th_percentile.math": 570,
+    "latest.admissions.sat_scores.50th_percentile.math": 610,
+    "latest.admissions.sat_scores.75th_percentile.math": 650,
+    "latest.admissions.act_scores.25th_percentile.cumulative": 25,
+    "latest.admissions.act_scores.50th_percentile.cumulative": 28,
+    "latest.admissions.act_scores.75th_percentile.cumulative": 29,
+    "school.name": "State University of New York at New Paltz"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.25th_percentile.math": null,
+    "latest.admissions.sat_scores.50th_percentile.math": null,
+    "latest.admissions.sat_scores.75th_percentile.math": null,
+    "latest.admissions.act_scores.25th_percentile.cumulative": null,
+    "latest.admissions.act_scores.50th_percentile.cumulative": null,
+    "latest.admissions.act_scores.75th_percentile.cumulative": null,
+    "school.name": "Vanguard University of Southern California"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": 650,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": 700,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": 740,
+    "latest.admissions.sat_scores.25th_percentile.math": 660,
+    "latest.admissions.sat_scores.50th_percentile.math": 740,
+    "latest.admissions.sat_scores.75th_percentile.math": 780,
+    "latest.admissions.act_scores.25th_percentile.cumulative": 30,
+    "latest.admissions.act_scores.50th_percentile.cumulative": 32,
+    "latest.admissions.act_scores.75th_percentile.cumulative": 34,
+    "school.name": "University of Illinois Urbana-Champaign"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": 740,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": 760,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": 780,
+    "latest.admissions.sat_scores.25th_percentile.math": 770,
+    "latest.admissions.sat_scores.50th_percentile.math": 790,
+    "latest.admissions.sat_scores.75th_percentile.math": 800,
+    "latest.admissions.act_scores.25th_percentile.cumulative": 34,
+    "latest.admissions.act_scores.50th_percentile.cumulative": 35,
+    "latest.admissions.act_scores.75th_percentile.cumulative": 35,
+    "school.name": "Columbia University in the City of New York"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.25th_percentile.math": null,
+    "latest.admissions.sat_scores.50th_percentile.math": null,
+    "latest.admissions.sat_scores.75th_percentile.math": null,
+    "latest.admissions.act_scores.25th_percentile.cumulative": null,
+    "latest.admissions.act_scores.50th_percentile.cumulative": null,
+    "latest.admissions.act_scores.75th_percentile.cumulative": null,
+    "school.name": "California State University-Los Angeles"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": 690,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": 720,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": 750,
+    "latest.admissions.sat_scores.25th_percentile.math": 730,
+    "latest.admissions.sat_scores.50th_percentile.math": 760,
+    "latest.admissions.sat_scores.75th_percentile.math": 780,
+    "latest.admissions.act_scores.25th_percentile.cumulative": 32,
+    "latest.admissions.act_scores.50th_percentile.cumulative": 33,
+    "latest.admissions.act_scores.75th_percentile.cumulative": 34,
+    "school.name": "Boston University"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.25th_percentile.math": null,
+    "latest.admissions.sat_scores.50th_percentile.math": null,
+    "latest.admissions.sat_scores.75th_percentile.math": null,
+    "latest.admissions.act_scores.25th_percentile.cumulative": null,
+    "latest.admissions.act_scores.50th_percentile.cumulative": null,
+    "latest.admissions.act_scores.75th_percentile.cumulative": null,
+    "school.name": "University of California-Berkeley"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": null,
+    "latest.admissions.sat_scores.25th_percentile.math": null,
+    "latest.admissions.sat_scores.50th_percentile.math": null,
+    "latest.admissions.sat_scores.75th_percentile.math": null,
+    "latest.admissions.act_scores.25th_percentile.cumulative": null,
+    "latest.admissions.act_scores.50th_percentile.cumulative": null,
+    "latest.admissions.act_scores.75th_percentile.cumulative": null,
+    "school.name": "University of California-San Diego"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": 490,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": 550,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": 610,
+    "latest.admissions.sat_scores.25th_percentile.math": 480,
+    "latest.admissions.sat_scores.50th_percentile.math": 540,
+    "latest.admissions.sat_scores.75th_percentile.math": 610,
+    "latest.admissions.act_scores.25th_percentile.cumulative": 22,
+    "latest.admissions.act_scores.50th_percentile.cumulative": 25,
+    "latest.admissions.act_scores.75th_percentile.cumulative": 29,
+    "school.name": "Purdue University Fort Wayne"
+  },
+  {
+    "latest.admissions.sat_scores.25th_percentile.critical_reading": 620,
+    "latest.admissions.sat_scores.50th_percentile.critical_reading": 660,
+    "latest.admissions.sat_scores.75th_percentile.critical_reading": 700,
+    "latest.admissions.sat_scores.25th_percentile.math": 620,
+    "latest.admissions.sat_scores.50th_percentile.math": 670,
+    "latest.admissions.sat_scores.75th_percentile.math": 720,
+    "latest.admissions.act_scores.25th_percentile.cumulative": 27,
+    "latest.admissions.act_scores.50th_percentile.cumulative": 30,
+    "latest.admissions.act_scores.75th_percentile.cumulative": 32,
+    "school.name": "Pennsylvania State University-Main Campus"
+  }
+]

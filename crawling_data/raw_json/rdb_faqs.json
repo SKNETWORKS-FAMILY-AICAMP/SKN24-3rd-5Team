@@ -1,0 +1,401 @@
+[
+    {
+        "school_code": "NYU",
+        "category": "Admissions",
+        "question": "What are the key deadlines for undergraduate admissions?",
+        "answer": "For undergraduate admissions at NYU, the key deadlines are as follows: Early Decision I by November 1 with decisions released by December 15, Early Decision II by January 1 with decisions released by February 15, and Regular Decision by January 5 with decisions released by April 1.",
+        "faq_id": "NYU_FAQ_1"
+    },
+    {
+        "school_code": "NYU",
+        "category": "Admissions",
+        "question": "Is NYU test-optional?",
+        "answer": "Yes, NYU is test-optional through the 2026-2027 application cycle. Students can choose whether to submit standardized testing as part of their application and may only need to submit one test.",
+        "faq_id": "NYU_FAQ_2"
+    },
+    {
+        "school_code": "NYU",
+        "category": "Financial Aid",
+        "question": "Does NYU meet 100% of demonstrated financial need?",
+        "answer": "Yes, NYU will meet 100% of demonstrated financial need for all first-time, first-year undergraduate students admitted to the New York campus.",
+        "faq_id": "NYU_FAQ_3"
+    },
+    {
+        "school_code": "NYU",
+        "category": "International Applicants",
+        "question": "What English proficiency exams does NYU accept for non-native speakers?",
+        "answer": "Non-native speakers may need to submit scores from recognized English proficiency exams taken within the last two years, such as TOEFL or IELTS.",
+        "faq_id": "NYU_FAQ_4"
+    },
+    {
+        "school_code": "NYU",
+        "category": "Spring Admissions",
+        "question": "What is the benefit of Spring Admission at NYU?",
+        "answer": "Spring Admission allows students to start their studies in January, offering benefits like reduced first-year costs, the opportunity to take classes or gain experience during the fall, and integration into the NYU community before starting.",
+        "faq_id": "NYU_FAQ_5"
+    },
+    {
+        "school_code": "USC",
+        "category": "Dates and Deadlines",
+        "question": "What are the important application deadlines for USC?",
+        "answer": "USC has the following key deadlines: Early Action (most majors) is November 1, Early Decision (most majors) is also November 1, Regular Decision for performing arts majors is December 1, and Regular Decision for most majors is January 10.",
+        "faq_id": "USC_FAQ_1"
+    },
+    {
+        "school_code": "USC",
+        "category": "Admission Requirements",
+        "question": "What is included in the application checklist for USC?",
+        "answer": "The application checklist for USC includes: The Common Application, optional official test scores, transcripts, a letter of recommendation, additional materials if required by your major, submission of Fall grades when available, application affirmations, and additional requirements for international students.",
+        "faq_id": "USC_FAQ_2"
+    },
+    {
+        "school_code": "USC",
+        "category": "Application Process",
+        "question": "Does USC accept home-schooled students differently?",
+        "answer": "Yes, home-schooled students applying to USC must submit answers to specific home-school questions and are encouraged to provide additional materials such as SAT/ACT scores or transcripts from accredited programs.",
+        "faq_id": "USC_FAQ_3"
+    },
+    {
+        "school_code": "USC",
+        "category": "Financial Aid",
+        "question": "Does USC offer need-based financial aid to international students?",
+        "answer": "No, USC does not provide need-based financial aid for international students. All international applicants must submit financial documentation to affirm their capability to finance their education.",
+        "faq_id": "USC_FAQ_4"
+    },
+    {
+        "school_code": "USC",
+        "category": "International Students",
+        "question": "What are the English proficiency requirements for international applicants?",
+        "answer": "International applicants whose native language is not English must submit an approved English proficiency examination score, such as TOEFL or IELTS, to demonstrate their English language skills.",
+        "faq_id": "USC_FAQ_5"
+    },
+    {
+        "school_code": "UIUC",
+        "category": "Applicant",
+        "question": "What required items do I need to send after I submit my application, and when are they due?",
+        "answer": "After submitting your application, you must ensure that any required transcripts and test scores are sent by the specified deadlines. For early action applications, all required items must be received by November 7, and for regular decision applications, by January 11.",
+        "faq_id": "UIUC_FAQ_1"
+    },
+    {
+        "school_code": "UIUC",
+        "category": "Applicant",
+        "question": "What percentage of applicants get admitted?",
+        "answer": "The admission rate varies from year to year, reflecting the competitiveness of the applicant pool. It's best to consult our class profile for up-to-date statistics.",
+        "faq_id": "UIUC_FAQ_2"
+    },
+    {
+        "school_code": "UIUC",
+        "category": "Applicant",
+        "question": "Is the ACT or SAT optional for all first-year applicants?",
+        "answer": "Yes, the ACT and SAT are optional for first-year applicants at Illinois. However, submitting scores may enhance your application and be required for certain merit-based scholarships.",
+        "faq_id": "UIUC_FAQ_3"
+    },
+    {
+        "school_code": "UIUC",
+        "category": "Applicant",
+        "question": "How do I check my application status in myIllini?",
+        "answer": "You can check your application status by logging into your myIllini account, where you will find updates regarding your application process.",
+        "faq_id": "UIUC_FAQ_4"
+    },
+    {
+        "school_code": "UIUC",
+        "category": "Applicant",
+        "question": "What should I do if I have questions regarding the visa process?",
+        "answer": "For visa-related questions, please refer to the International Student Services office or check the information provided in your Notice of Admission letter.",
+        "faq_id": "UIUC_FAQ_5"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "What is Columbia looking for when evaluating students for admission? What are the criteria for admission?",
+        "answer": "Columbia reviews applications holistically, considering academic performance, personal qualities, extracurricular involvement, and potential contributions to the Columbia community.",
+        "faq_id": "Columbia_FAQ_1"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "How competitive is admission to Columbia?",
+        "answer": "Admission to Columbia is highly competitive due to the large number of applicants and the university's prestigious reputation.",
+        "faq_id": "Columbia_FAQ_2"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "Are there advisers for specific departmental majors?",
+        "answer": "Yes, Columbia provides academic advisers for each departmental major to assist students with their academic planning.",
+        "faq_id": "Columbia_FAQ_3"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "Does Columbia allow students to double major?",
+        "answer": "Yes, students at Columbia are allowed to double major.",
+        "faq_id": "Columbia_FAQ_4"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "What are your secondary/high school course requirements for admission?",
+        "answer": "Applicants must demonstrate a strong academic background, typically including a rigorous high school curriculum.",
+        "faq_id": "Columbia_FAQ_5"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "Is there a minimum test score, class rank or GPA required for admission to Columbia?",
+        "answer": "Columbia does not set strict minimums for test scores, GPA, or class rank; all components of the application are reviewed in context.",
+        "faq_id": "Columbia_FAQ_6"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "How large are Columbia's classes?",
+        "answer": "Columbia classes vary in size, with many graduate seminars being small, while introductory classes can have larger enrollments.",
+        "faq_id": "Columbia_FAQ_7"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "Is there a maximum number of students admitted from a particular country, region or school?",
+        "answer": "No, Columbia does not impose caps on admissions from specific countries, regions, or schools.",
+        "faq_id": "Columbia_FAQ_8"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "May I apply to both Columbia College and Columbia Engineering?",
+        "answer": "Yes, students may apply to both Columbia College and Columbia Engineering.",
+        "faq_id": "Columbia_FAQ_9"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "When do application decisions become available?",
+        "answer": "Application decisions are released through the applicant portal; specific dates can vary annually.",
+        "faq_id": "Columbia_FAQ_10"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "What if I need an application deadline extension?",
+        "answer": "Columbia generally adheres strictly to its deadlines but may process late materials under certain circumstances.",
+        "faq_id": "Columbia_FAQ_11"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Applying",
+        "question": "How can I take advantage of everything I want to do in New York City on a student budget?",
+        "answer": "Columbia offers various resources, programs, and events that help students enjoy New York City affordably.",
+        "faq_id": "Columbia_FAQ_12"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Financial Aid",
+        "question": "Does Columbia grant credit for college courses and credits earned during high school?",
+        "answer": "Yes, Columbia grants credit for eligible college courses and AP credits earned during high school.",
+        "faq_id": "Columbia_FAQ_13"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Financial Aid",
+        "question": "Are students required to live on campus? Can I seek off-campus housing?",
+        "answer": "First-year students are required to live on campus, but upperclassmen have the option to seek off-campus housing.",
+        "faq_id": "Columbia_FAQ_14"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "Financial Aid",
+        "question": "What is Columbia’s policy on admissions interviews?",
+        "answer": "Interviews are not part of the application process.",
+        "faq_id": "Columbia_FAQ_15"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "International and Undocumented Students",
+        "question": "What are the English Proficiency Requirements for international applicants?",
+        "answer": "International applicants must demonstrate proficiency in English, which can be satisfied by standardized tests or other means.",
+        "faq_id": "Columbia_FAQ_16"
+    },
+    {
+        "school_code": "Columbia",
+        "category": "International and Undocumented Students",
+        "question": "What is Columbia's policy on financial aid for international students?",
+        "answer": "Columbia meets 100% of the demonstrated need for all admitted first-year international students.",
+        "faq_id": "Columbia_FAQ_17"
+    },
+    {
+        "school_code": "BU",
+        "category": "application process",
+        "question": "What is Boston University’s test policy?",
+        "answer": "Boston University will adopt a test optional policy for first-year applicants applying through fall 2028/spring 2029. This policy applies to all undergraduate schools and colleges, as well as all scholarship programs, although international students must submit a TOEFL, IELTS, or Duolingo English Test for English proficiency.",
+        "faq_id": "BU_FAQ_1"
+    },
+    {
+        "school_code": "BU",
+        "category": "admissions deadlines",
+        "question": "What are the Early Decision deadlines for Boston University?",
+        "answer": "The Early Decision application deadline is November 2, with a notification date of December 15. Early Decision 2 has an application deadline of January 5 and a notification date of February 9.",
+        "faq_id": "BU_FAQ_2"
+    },
+    {
+        "school_code": "BU",
+        "category": "financial aid",
+        "question": "What is the BU Promise?",
+        "answer": "The BU Promise guarantees that Boston University will meet 100% of demonstrated financial need for all domestic first-year students without the use of loans. Students from families with incomes under $200,000 can expect financial aid support that covers full tuition and a portion of housing and dining costs.",
+        "faq_id": "BU_FAQ_3"
+    },
+    {
+        "school_code": "BU",
+        "category": "first-year applicants",
+        "question": "How do I apply as a first-year student?",
+        "answer": "You must submit either the Common Application or the QuestBridge Application, along with required documents including a high school transcript, senior year grades, counselor recommendation, teacher evaluation, and optional standardized test scores.",
+        "faq_id": "BU_FAQ_4"
+    },
+    {
+        "school_code": "BU",
+        "category": "international students",
+        "question": "What do international applicants need to submit?",
+        "answer": "International applicants are required to submit the Common Application, secondary school records, senior year grades, counselor recommendation, teacher evaluation, evidence of English proficiency, financial support documentation, and a copy of the passport.",
+        "faq_id": "BU_FAQ_5"
+    },
+    {
+        "school_code": "UCBerkeley",
+        "category": "Application Process",
+        "question": "What is the selection process for first-year applicants?",
+        "answer": "UC Berkeley uses a holistic review process, which means they evaluate all aspects of an application, including academics and personal experiences, without weighted emphasis on any one part.",
+        "faq_id": "UCBerkeley_FAQ_1"
+    },
+    {
+        "school_code": "UCBerkeley",
+        "category": "Standardized Testing",
+        "question": "Does UC Berkeley require standardized test scores for admission?",
+        "answer": "No, UC Berkeley is test-free and does not consider SAT/ACT scores in the admissions process; however, these scores can be used for placement or credit if submitted.",
+        "faq_id": "UCBerkeley_FAQ_2"
+    },
+    {
+        "school_code": "UCBerkeley",
+        "category": "International Students",
+        "question": "What is required for international applicants?",
+        "answer": "International applicants must either require a visa to study in the U.S. or have graduated high school outside the U.S. They must also prove their English proficiency.",
+        "faq_id": "UCBerkeley_FAQ_3"
+    },
+    {
+        "school_code": "UCBerkeley",
+        "category": "Financial Aid",
+        "question": "What are the costs associated with attending UC Berkeley?",
+        "answer": "The cost of attendance includes tuition and fees, living expenses, and miscellaneous personal expenses. For non-residents, there is an additional nonresident tuition fee.",
+        "faq_id": "UCBerkeley_FAQ_4"
+    },
+    {
+        "school_code": "UCBerkeley",
+        "category": "Letters of Recommendation",
+        "question": "Are letters of recommendation required for the application?",
+        "answer": "Letters of recommendation are not required but may be submitted by invited applicants to enhance their application.",
+        "faq_id": "UCBerkeley_FAQ_5"
+    },
+    {
+        "school_code": "UCSD",
+        "category": "Admissions",
+        "question": "How do I apply to UC San Diego?",
+        "answer": "You can apply to UC San Diego by submitting the University of California Application, which opens on August 1 for the following Fall term.",
+        "faq_id": "UCSD_FAQ_1"
+    },
+    {
+        "school_code": "UCSD",
+        "category": "Academics & Majors",
+        "question": "What majors are offered at UC San Diego?",
+        "answer": "UC San Diego offers a wide range of majors across multiple colleges; you can view the complete list of available majors on the university's website.",
+        "faq_id": "UCSD_FAQ_2"
+    },
+    {
+        "school_code": "UCSD",
+        "category": "Cost & Financial Aid",
+        "question": "How much does it cost to attend UC San Diego?",
+        "answer": "The cost of attendance varies by residency status (California resident vs. non-resident) and includes tuition, fees, living expenses, and other related costs.",
+        "faq_id": "UCSD_FAQ_3"
+    },
+    {
+        "school_code": "UCSD",
+        "category": "First-Year",
+        "question": "What are A-G requirements?",
+        "answer": "A-G requirements are a series of college preparatory courses required for admission to the University of California system, ensuring that students are well-prepared for academic work at the university level.",
+        "faq_id": "UCSD_FAQ_4"
+    },
+    {
+        "school_code": "UCSD",
+        "category": "International Students",
+        "question": "What English proficiency tests are accepted for international students?",
+        "answer": "International students must demonstrate English proficiency through tests such as TOEFL, IELTS, or the Duolingo English Test, with minimum required scores specified by UC San Diego.",
+        "faq_id": "UCSD_FAQ_5"
+    },
+    {
+        "school_code": "Purdue",
+        "category": "Admissions",
+        "question": "What is the application process for Purdue University?",
+        "answer": "To apply to Purdue University, first-year students complete the Common Application, which includes an essay, responses to Purdue-specific questions, self-reported high school grades, and possibly SAT or ACT scores. The application must be submitted along with a fee or a fee waiver.",
+        "faq_id": "Purdue_FAQ_1"
+    },
+    {
+        "school_code": "Purdue",
+        "category": "Admissions",
+        "question": "What are the application deadlines for Purdue University?",
+        "answer": "The application deadline for Early Action is November 1. Make sure to submit all required materials by that date.",
+        "faq_id": "Purdue_FAQ_2"
+    },
+    {
+        "school_code": "Purdue",
+        "category": "Admissions",
+        "question": "What are the SAT/ACT requirements for Purdue University?",
+        "answer": "Purdue accepts both SAT and ACT scores without a preference. Students may report their highest scores from different test dates, and around 97% of admitted students provided a test score.",
+        "faq_id": "Purdue_FAQ_3"
+    },
+    {
+        "school_code": "Purdue",
+        "category": "International Students",
+        "question": "What are the English proficiency requirements for international students?",
+        "answer": "International students whose primary language is not English must demonstrate English proficiency through exams like TOEFL, IELTS, or the Duolingo English Test, meeting specific score requirements.",
+        "faq_id": "Purdue_FAQ_4"
+    },
+    {
+        "school_code": "Purdue",
+        "category": "Tuition and Fees",
+        "question": "What are the tuition and fee rates for 2025-2026?",
+        "answer": "Tuition rates vary based on the program of study and the number of credit hours. Detailed fee structures for undergraduate students can be viewed on the Bursar's Office website.",
+        "faq_id": "Purdue_FAQ_5"
+    },
+    {
+        "school_code": "PennState",
+        "category": "application",
+        "question": "What is the application fee for Penn State?",
+        "answer": "The application fee for domestic students is $65 and for international students, it is $75.",
+        "faq_id": "PennState_FAQ_1"
+    },
+    {
+        "school_code": "PennState",
+        "category": "admissions",
+        "question": "What are the Early Action and Priority Admissions deadlines?",
+        "answer": "The Early Action Deadline is November 1, and the Priority Admission Deadline is February 1.",
+        "faq_id": "PennState_FAQ_2"
+    },
+    {
+        "school_code": "PennState",
+        "category": "requirements",
+        "question": "What are the minimum high school course requirements for a four-year degree at Penn State?",
+        "answer": "For a four-year degree, students must complete 4 units of English, 3 units of social studies or humanities, 3 units of science, 3 units of math (including Algebra I, Algebra II, and Geometry), and 2 units of a world language.",
+        "faq_id": "PennState_FAQ_3"
+    },
+    {
+        "school_code": "PennState",
+        "category": "international",
+        "question": "What are the steps for international students to apply to Penn State?",
+        "answer": "International students should research programs and campuses, review admission requirements and deadlines, gather necessary documents, access the application through MyPennState or Common App, finalize details, submit the application, and check application status.",
+        "faq_id": "PennState_FAQ_4"
+    },
+    {
+        "school_code": "PennState",
+        "category": "eligibility",
+        "question": "What is the GPA range for the middle 50% of admitted students at University Park?",
+        "answer": "The middle 50% GPA for admitted students at University Park ranges from 3.63 to 3.94.",
+        "faq_id": "PennState_FAQ_5"
+    }
+]

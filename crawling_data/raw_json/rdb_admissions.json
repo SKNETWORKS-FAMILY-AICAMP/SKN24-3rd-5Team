@@ -1,0 +1,72 @@
+[
+    {
+        "tuition": 60000,
+        "regular_deadline": "Jan 1",
+        "early_deadline": "Nov 1",
+        "admission_id": "NYU_ADM",
+        "school_code": "NYU"
+    },
+    {
+        "tuition": 75384,
+        "regular_deadline": "January 10",
+        "early_deadline": "November 1",
+        "admission_id": "USC_ADM",
+        "school_code": "USC"
+    },
+    {
+        "tuition": 58616,
+        "regular_deadline": "Jan 5",
+        "early_deadline": "Nov 1",
+        "admission_id": "UIUC_ADM",
+        "school_code": "UIUC"
+    },
+    {
+        "tuition": 70170,
+        "regular_deadline": "Jan 1",
+        "early_deadline": "Nov 1",
+        "admission_id": "Columbia_ADM",
+        "school_code": "Columbia"
+    },
+    {
+        "tuition": 80739,
+        "regular_deadline": "Dec 1",
+        "early_deadline": "N/A",
+        "admission_id": "UCLA_ADM",
+        "school_code": "UCLA"
+    },
+    {
+        "tuition": 73024,
+        "regular_deadline": "Jan 5",
+        "early_deadline": "Nov 2",
+        "admission_id": "BU_ADM",
+        "school_code": "BU"
+    },
+    {
+        "tuition": 39370,
+        "regular_deadline": "Nov 30",
+        "early_deadline": "N/A",
+        "admission_id": "UCBerkeley_ADM",
+        "school_code": "UCBerkeley"
+    },
+    {
+        "tuition": 21546,
+        "regular_deadline": "Dec 1",
+        "early_deadline": "N/A",
+        "admission_id": "UCSD_ADM",
+        "school_code": "UCSD"
+    },
+    {
+        "tuition": 42000,
+        "regular_deadline": "Jan 1",
+        "early_deadline": "Nov 1",
+        "admission_id": "Purdue_ADM",
+        "school_code": "Purdue"
+    },
+    {
+        "tuition": 55354,
+        "regular_deadline": "Dec 1",
+        "early_deadline": "Nov 1",
+        "admission_id": "PennState_ADM",
+        "school_code": "PennState"
+    }
+]
