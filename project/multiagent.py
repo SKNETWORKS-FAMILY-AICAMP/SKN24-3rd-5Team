@@ -36,13 +36,24 @@ Original file is located at
 - **비역질문 처리:** 만약 입시와 비자를 동시에 묻는다면 어떻게 처리할까요? (가장 비중이 높은 쪽으로 라우팅하거나 에이전트의 도구로 비자 검색을 추가하는 방법이 있습니다.)
 """
 
-# pip install -U langchain-ollama
-
 # !pip install langchain langchain-community sqlalchemy pymysql
 # !pip install langchain_ollama
 # !pip install langchain langchain-community langgraph langchain-ollama sqlalchemy pymysql python-dotenv
 # !pip install -U langchain langchain-core langchain-community
 # !pip install pypdf
+# !pip install streamlit
+# !pip install -U langchain-ollama
+# !pip install librosa
+# !pip install sounddevice
+# !pip install pandas
+# !pip install datasets
+# !pip install openai
+# !pip install langchain_huggingface
+# !pip install langchain_chroma
+# !pip install pdf2image
+# !pip install pytesseract
+# !pip install sentence-transformers
+# !pip install audio_recorder_streamlit
 
 from dotenv import load_dotenv
 import os
@@ -56,12 +67,6 @@ load_dotenv(dotenv_path="/workspace/project/env")
 
 from langchain_community.chat_models import ChatOllama
 #############################################################################
-def get_router_llm():
-    return ChatOllama(
-        model="llama3:8b",   # 빠르고 충분
-        temperature=0
-    )
-
 llm = ChatOllama(
     model="ebdm/gemma3-enhanced:12b",  # 이미 쓰는거
     temperature=0
@@ -70,7 +75,7 @@ llm = ChatOllama(
 #############################################################################
 def get_service2_llm():
     return ChatOllama(
-        model="llama3:8b",   # 대화용
+        model="ebdm/gemma3-enhanced:12b",   # 대화용
         temperature=0.3
     )
 
@@ -84,37 +89,68 @@ def get_router_llm():
     )
 router_llm = get_router_llm()
 
-from typing import Annotated, TypedDict
+from typing import TypedDict, Annotated, List, Union
+# AssistantMessage를 AIMessage로 변경합니다.
+from langchain_core.messages import BaseMessage, HumanMessage, AIMessage 
+# State의 메시지를 누적해주는 도구
 from langgraph.graph.message import add_messages
 
+# [최종 State 정의]
 class MultiAgentState(TypedDict):
-    messages: Annotated[list, add_messages]
+    # 이제 add_messages와 AIMessage를 정상적으로 인식합니다.
+    messages: Annotated[List[BaseMessage], add_messages]
+    pdf_path: str
+    interview_history: list
+    is_interview_mode: bool
+    profile_context: str
     route: str
-    user_pdf_path: str  # 사용자가 업로드한 PDF 경로를 저장할 곳
-
+    
 def router_node(state: MultiAgentState):
-    # 메시지 추출
+    # 1. 메시지 추출
     last_msg = state["messages"][-1]
-    question = last_msg.content if hasattr(last_msg, 'content') else last_msg[1]
+    # 메시지 객체 혹은 튜플 형태에 대응
+    if isinstance(last_msg, tuple):
+        question = last_msg[1]
+    elif hasattr(last_msg, 'content'):
+        question = last_msg.content
+    else:
+        question = str(last_msg)
+    
+    # 2. 강력한 탈출 키워드 체크 (인터뷰 중이라도 일반 상담으로 전환)
+    exit_keywords = ["점수", "학비", "언제", "입학", "마감", "조건", "커트라인"]
+    if any(k in question for k in exit_keywords):
+        print(f"--- [ROUTER DEBUG] 탈출 키워드 감지: service1으로 분기 ---")
+        return {"route": "service1"}
 
+    # 3. 인터뷰 진행 상태 확인 (답변 대기 중인지 체크)
+    history = state.get("interview_history", [])
+    if history and len(history) > 0:
+        # 마지막 항목의 answer가 비어있다면 사용자의 답변 턴으로 간주
+        if not history[-1].get("answer"):
+            print("--- [ROUTER DEBUG] 인터뷰 진행 중 (답변 대기): service2 강제 할당 ---")
+            return {"route": "service2"}
+
+    # 4. 인터뷰 시작 또는 일반 상담 여부 판단 (LLM)
     prompt = f"""
     당신은 질문 분류기입니다. 아래 규칙에 따라 오직 한 단어 'ADMISSIONS' 또는 'INTERVIEW'만 출력하세요.
-    - 대학교 정보, 학비, 입학 조건 조회 -> ADMISSIONS
-    - 비자 인터뷰 연습, 모의 면접, 녹음/말하기 연습 -> INTERVIEW
+    - 대학교 정보, 학비, 입학 조건, 전공 정보 조회 -> ADMISSIONS
+    - 비자 인터뷰 연습, 모의 면접, 말하기 연습, 인터뷰 시작 -> INTERVIEW
+    
     질문: {question}
-    분류 (단어 하나만): """
+    분류 (ADMISSIONS 또는 INTERVIEW): """
 
-    response = router_llm.invoke(prompt)
-    decision = response.content.strip().upper()
+    try:
+        # router_llm이 사전에 정의되어 있어야 합니다.
+        response = router_llm.invoke(prompt)
+        decision = response.content.strip().upper()
+    except Exception as e:
+        print(f"LLM 호출 오류: {e}")
+        decision = "ADMISSIONS"
 
-    # 경로 결정
     route = "service2" if "INTERVIEW" in decision else "service1"
-
     print(f"--- [ROUTER DEBUG] 결정: {route} (LLM 답변: {decision}) ---")
 
-    # ⚠️ 전체 state 대신 업데이트할 'route' 키만 반환합니다.
     return {"route": route}
-
 # graph (service2)
 def visa_node(state):
     # 전역 변수 visa_llm을 사용함을 명시 (선택사항이지만 안전함)
@@ -143,18 +179,6 @@ def build_service2_graph():
 
 """
 
-# !pip install librosa
-# !pip install sounddevice
-# !pip install pyaudio
-# !pip install pandas
-# !pip install datasets
-# !pip install openai
-# !pip install langchain_huggingface
-# !pip install langchain_chroma
-# !pip install pdf2image
-# !pip install pytesseract
-# !pip install sentence-transformers
-
 from dotenv import load_dotenv
 import os
 # 현재 경로 기준으로 .env 불러오기
@@ -175,42 +199,66 @@ def service1_node(state):
     # 여기서 'service1_graph'라는 변수를 찾는데, 위에서 정의를 안 하면 에러가 납니다.
     return service1_graph.invoke(state)
 
+
+# multiagent.py의 service2_node
 def service2_node(state: MultiAgentState):
-    """
-    state에 저장된 PDF 경로를 사용하여 인터뷰 엔진을 실행합니다.
-    """
-    # 1. State에서 경로 추출
-    pdf_path = state.get("user_pdf_path")
-    essay_path = state.get("essay_pdf_path", None)
+    import os
+    # 필요한 함수들 임포트 확인
+    from service_2_run import get_next_question, get_final_evaluation
+    
+    # 1. State에서 데이터 가져오기
+    # [수정] 변수명을 명확히 'history_data' 등으로 정의하여 혼동을 방지합니다.
+    pdf_path = state.get("pdf_path")
+    history_data = state.get("interview_history", [])  # 여기서 꺼낸 변수명을 아래에서 똑같이 써야 합니다.
+    profile_context = state.get("profile_context", "")
 
-    # ⚠️ [핵심 추가] 파일 경로 유효성 검사
-    # 경로가 None이거나 실제 파일이 해당 위치에 없으면 즉시 에러 메시지 반환
-    if not pdf_path or not os.path.exists(pdf_path):
-        error_msg = f"파일을 찾을 수 없습니다. (입력된 경로: {pdf_path})"
-        print(f"\n[Service 2 ERROR] {error_msg}")
+    # 2. PDF 경로 체크
+    if not pdf_path or not os.path.exists(str(pdf_path)):
         return {
-            "messages": [("assistant", f"인터뷰 연습을 시작하려면 정확한 PDF 경로가 필요합니다. 현재 경로를 확인해주세요: {pdf_path}")]
+            "messages": [("assistant", "⚠️ 서류 정보를 확인할 수 없습니다. PDF를 다시 업로드해주세요.")],
+            "is_interview_mode": False
         }
 
-    print(f"\n[Service 2] {pdf_path} 파일을 기반으로 인터뷰를 생성합니다.")
+    # 3. 답변 완료 여부 체크
+    if not history_data:
+        last_question_answered = True
+    else:
+        # 마지막 질문에 답변이 달렸는지 확인
+        last_answer = history_data[-1].get("answer", "")
+        last_question_answered = bool(last_answer and str(last_answer).strip())
 
-    try:
-        # 2. 기존 run 함수에 동적 경로 전달
-        run_service_2_visa(
-            user_pdf_path=pdf_path,
-            essay_pdf_path=essay_path,
-            n_questions=2,
-            record_duration=8
-        )
-
+    # 4. 인터뷰 진행 로직
+    
+    # A. 다음 질문 생성 (3개 미만)
+    if len(history_data) < 3 and last_question_answered:
+        # [해결] 여기서 'history'가 아닌 'history_data'를 넘겨줘야 합니다.
+        new_question = get_next_question(profile_context or f"Path: {pdf_path}", history_data)
+        
+        tagged_question = f"Officer: {new_question}"
+        # 업데이트된 히스토리 생성
+        updated_history = history_data + [{"question": tagged_question, "answer": ""}]
+        
         return {
-            "messages": [("assistant", "인터뷰와 AI 평가가 완료되었습니다. 확인해 보세요!")]
+            "messages": [("assistant", tagged_question)],
+            "interview_history": updated_history,
+            "is_interview_mode": True
         }
 
-    except Exception as e:
-        # 파일은 있지만 다른 로직(분석 등)에서 터졌을 때 처리
+    # B. 최종 평가 생성
+    elif len(history_data) >= 3 and last_question_answered:
+        evaluation = get_final_evaluation(profile_context or f"Path: {pdf_path}", history_data)
+        
         return {
-            "messages": [("assistant", f"인터뷰 엔진 실행 중 오류가 발생했습니다: {str(e)}")]
+            "messages": [("assistant", f"인터뷰가 종료되었습니다.\n\n{evaluation}")],
+            "interview_history": [], 
+            "is_interview_mode": False
+        }
+
+    # C. 답변 대기
+    else:
+        return {
+            "messages": [("assistant", "답변을 기다리고 있습니다. 말씀을 마치시면 녹음 완료를 눌러주세요.")],
+            "is_interview_mode": True
         }
 
 service1_graph = build_state_graph()
@@ -245,61 +293,58 @@ multi_agent_graph = builder.compile()
 
 """### 최종 실행 함수"""
 
-from IPython.display import Image, display
-display(Image(multi_agent_graph.get_graph().draw_mermaid_png()))
+# from IPython.display import Image, display
+# display(Image(multi_agent_graph.get_graph().draw_mermaid_png()))
+# multiagent.py 파일 맨 아래에 추가
 
-def run_multi_agent_stream(question: str, pdf_path: str = None, essay_path: str = None) -> str:
+def run_multi_agent_stream(question: str, pdf_path: str = None, history: list = []):
     """
-    메인 그래프(multi_agent_graph)를 실행하고 최종 답변을 스트리밍 방식으로 추출합니다.
+    UI에서 받은 데이터를 Graph의 초기 State로 주입하고 실행합니다.
     """
-    # 1. 초기 입력 설정 (메시지 + PDF 경로)
-    # MessagesState 구조에 맞춰 입력 구성
+    from langchain_core.messages import HumanMessage
+
+    # 1. 초기 입력값 구성 (State 키값 매칭 확인 필수)
+    # pdf_path가 None일 경우를 대비해 확실히 로그를 남깁니다.
+    print(f"--- [FLOW DEBUG] 에이전트 호출 시작 (PDF: {pdf_path}) ---")
+    
     inputs = {
-        "messages": [("user", question)],
-        "user_pdf_path": pdf_path,
-        "essay_pdf_path": essay_path
+        "messages": [HumanMessage(content=question)],
+        "pdf_path": pdf_path,           # service2_node의 state.get("pdf_path")와 정확히 일치
+        "interview_history": history,   # 이전 대화 기록 전달
+        "is_interview_mode": True if history else False  # 현재 모드 상태 추측 주입
     }
 
     final_answer = ""
 
-    # 2. multi_agent_graph 실행 (updates 모드)
-    for step in multi_agent_graph.stream(inputs, stream_mode="updates"):
-        for node_name, content in step.items():
-            # 디버깅용: 현재 실행 중인 노드 확인
-            print(f"--- [Node: {node_name}] 실행 중 ---")
+    # 2. 그래프 실행
+    try:
+        # thread_id나 config가 필요하다면 추가하세요. (예: config={"configurable": {"thread_id": "1"}})
+        for step in multi_agent_graph.stream(inputs, stream_mode="updates"):
+            # step은 {'노드이름': {'state_key': 'value'}} 형태입니다.
+            for node_name, content in step.items():
+                print(f"--- [NODE DEBUG] 현재 실행 중인 노드: {node_name} ---")
+                
+                if "messages" in content:
+                    last_msg = content["messages"][-1]
+                    
+                    # 메시지 추출 (객체/튜플/문자열 모두 대응)
+                    if hasattr(last_msg, 'content'):
+                        final_answer = last_msg.content
+                    elif isinstance(last_msg, (tuple, list)) and len(last_msg) >= 2:
+                        final_answer = last_msg[1]
+                    else:
+                        final_answer = str(last_msg)
+                
+                # [추가] 노드 실행 후 pdf_path 상태가 유지되는지 확인용 로그
+                if "pdf_path" in content:
+                    print(f"--- [STATE DEBUG] 노드 실행 후 PDF 경로: {content['pdf_path']} ---")
 
-            # 노드 결과물에서 메시지 추출
-            if "messages" in content:
-                last_msg = content["messages"][-1]
+        if not final_answer:
+            final_answer = "시스템 오류: 에이전트 응답 생성에 실패했습니다."
 
-                # ✅ 튜플/객체 여부에 따른 안전한 텍스트 추출 (AttributeError 방지)
-                if hasattr(last_msg, 'content'):
-                    # AIMessage 객체인 경우
-                    final_answer = last_msg.content
-                elif isinstance(last_msg, (tuple, list)):
-                    # ('assistant', '내용') 튜플인 경우
-                    final_answer = last_msg[1]
-                else:
-                    # 그 외 문자열인 경우
-                    final_answer = str(last_msg)
-
+    except Exception as e:
+        print(f"--- [CRITICAL ERROR] 그래프 실행 중 중단: {e} ---")
+        final_answer = f"죄송합니다. 처리 중 오류가 발생했습니다: {str(e)}"
+    
     return final_answer
-
-# # 실제 실행 시나리오 테스트
-# if __name__ == "__main__":
-#     # 테스트 1: 학비 질문 (Service 1로 가야 함)
-#     print("\n[테스트 1: 학비 질문]")
-#     ans1 = run_multi_agent_stream("뉴욕대학교 학비 알려줘")
-#     print(f"결과: {ans1}")
-
-#     # 테스트 2: 인터뷰 연습 (Service 2로 가야 함)
-#     print("\n[테스트 2: 인터뷰 연습]")
-#     ans2 = run_multi_agent_stream(
-#         "내 서류 바탕으로 비자 인터뷰 연습하고 싶어",
-#         pdf_path="workspace/3차프로젝트/f-1_yuji.pdf"
-#     )
-#     print(f"결과: {ans2}")
-
-# run_multi_agent_stream("대학교 학비 알려줘")
-
-# run_multi_agent_stream("비자 인터뷰 연습 시작할래", pdf_path="f-1_yuji.pdf")
+ 

@@ -161,7 +161,8 @@ def speech_to_text(audio_file):
     with open(audio_file, "rb") as f:
         transcription = client.audio.transcriptions.create(
             model="whisper-1",
-            file=f
+            file=f,
+            language="en"
         )
     return transcription.text
 
@@ -261,8 +262,13 @@ def run_service_2_visa(
         )
 
         question_prompt = f"""
-        당신은 미국 F1 비자 인터뷰 면접관입니다.
-
+        당신은 미국 F1 비자 인터뷰 면접관입니다. 사용자가 미국 F1 비자 지원자라고 생각하고 다음 조건에 맞게 질문을 생성하세요.
+        
+        [절대 규칙 - 반드시 지켜야 함]
+        - 오직 질문 1문장만 출력하세요.
+        - 다른 설명, 서론, 안내, 인사말 절대 금지
+        - 이전 인터뷰를 참고해 질문 유형은 매 질문마다 바뀌어야 함
+        
         지원자 정보:
         {profile_context}
 
@@ -272,16 +278,69 @@ def run_service_2_visa(
         참고 질문:
         {q_ref}
 
+        [정보 추출 단계 - 반드시 수행]
+
+        지원자 정보는 I-20 문서입니다.
+        
+        다음 위치에서 정보를 정확히 추출하세요:
+        
+        1. 전공 (Major)
+        - "PROGRAM OF STUDY" 섹션
+        - 그 안의 "MAJOR 1" 값
+        
+        2. 학교명 (University)
+        - "SCHOOL INFORMATION" 섹션
+        - 그 안의 "SCHOOL NAME" 값
+        
+        3. 비용 (Cost)
+        - "ESTIMATED AVERAGE COSTS"
+        - TOTAL 값
+        
+        4. 재정 (Funding)
+        - "STUDENT'S FUNDING"
+        - TOTAL 값
+        
+        5. 시작일 (Start Date)
+        - "START OF CLASSES"
+        
+        규칙:
+        - 반드시 원문 영어 사용
+        - 정확한 키워드 기반으로 찾기 (추측 금지)
+        
+        --------------------------------------
+        [질문 유형 선택]
+        
+        다음 중 하나 선택:
+        
+        1. Academic
+        2. Financial
+        3. Intent
+        4. Background
+        
+        - 이전 질문과 다른 유형 선택
+        
+        --------------------------------------
+        [정보 사용 규칙]
+        
+        - Academic → Major, University 사용
+        - Financial → Cost, Funding 사용
+        - Intent → 미래 계획
+        - Background → 동기
+
         [핵심 규칙]
         - 질문은 영어로 1~2문장으로 간결하게 작성하세요.
         - 참고 질문을 그대로 사용하는 것은 금지합니다.
         - 참고 질문은 오직 "문장 구조"만 참고하세요.
         - 반드시 지원자 정보의 실제 내용을 사용해서 질문을 생성하세요. (전공, 학교, 계획 등)
+        - 지원자는 학교에 합격한 상태이지, 학교를 다닌 경험은 없습니다. 이를 바탕으로 질문하세요.
+        - placeholder ([전공], [학교]) 절대 금지합니다
         - 이전 인터뷰의 질문과 같은 질문은 하지 않습니다.
         - 이전 인터뷰의 답변에 이어지는 꼬리질문은 금지합니다.
         - 없는 정보는 생성하지 않습니다.
+        - 정보 추출 결과는 절대 출력하지 마세요.
+        - 내부적으로만 사용하세요.
+        - 최종 출력은 반드시 질문에 관련된 1개의 문장만 작성하세요.
 
-        반드시 영어로 질문 1개만 출력하세요.
         """
         question = llm.invoke(question_prompt).content.strip()
         print(f"\nOfficer: {question}")
@@ -378,37 +437,104 @@ if __name__ == "__main__":
     )
 
 def get_next_question(profile_context, history):
-    """
-    스트림릿에서 호출할 다음 질문 생성 함수
-    """
-    # 1. 이전 대화 텍스트 조립
     history_text = "".join(f"Q: {h['question']}\nA: {h['answer']}\n" for h in history)
     
-    # 2. 질문 레퍼런스 추출
     qa_retriever = vector_store.as_retriever(search_kwargs={"filter": {"type": "qa"}})
-    # 리스트가 비어있을 경우를 대비해 안전하게 호출
-    invoked_docs = qa_retriever.invoke("F1 visa interview")
-    q_ref = random.choice(invoked_docs).page_content if invoked_docs else "What are your plans after graduation?"
+    existing = qa_retriever.invoke("F1 visa interview")
+    
+    if not existing:
+        import pandas as pd
+        from datasets import load_dataset
+        df = load_dataset("Blessing988/f1_visa_transcripts")
+        df = pd.DataFrame(df["train"])
+        qa_docs = [
+            Document(
+                page_content=row["input"],
+                metadata={"answer": row["output"], "source": "f1_visa_interview_qna", "type": "qa"}
+            )
+            for _, row in df[['input', 'output']].iterrows()
+        ]
+        vector_store.add_documents(qa_docs)
+        existing = qa_retriever.invoke("F1 visa interview")
+    
+    # 매번 다른 키워드로 검색
+    keywords = ["study plans", "financial support", "major", "university", "return home", "career goals", "scholarship"]
+    random_query = random.choice(keywords)
+    existing = qa_retriever.invoke(random_query)
+    q_ref = random.choice(existing).page_content if existing else "What are your plans after graduation?"
 
-    # 3. 프롬프트 작성
     question_prompt = f"""
-    당신은 미국 F1 비자 인터뷰 면접관입니다.
-    지원자 정보: {profile_context}
-    이전 인터뷰: {history_text}
-    참고 질문 구조: {q_ref}
+    당신은 미국 F1 비자 인터뷰 면접관입니다. 사용자가 미국 F1 비자 지원자라고 생각하고 다음 조건에 맞게 질문을 생성하세요.
+    
+    [절대 규칙 - 반드시 지켜야 함]
+    - 오직 질문 1문장만 출력하세요.
+    - 다른 설명, 서론, 안내, 인사말 절대 금지
+    - 이전 인터뷰를 참고해 질문 유형은 매 질문마다 바뀌어야 함
+    
+    지원자 정보:
+    {profile_context}
+
+    이전 인터뷰:
+    {history_text}
+
+    참고 질문:
+    {q_ref}
+
+    [정보 추출 단계 - 반드시 수행]
+    지원자 정보는 I-20 문서입니다.
+    다음 위치에서 정보를 정확히 추출하세요:
+    1. 전공 (Major) - "PROGRAM OF STUDY" 섹션의 "MAJOR 1" 값
+    2. 학교명 (University) - "SCHOOL INFORMATION" 섹션의 "SCHOOL NAME" 값
+    3. 비용 (Cost) - "ESTIMATED AVERAGE COSTS"의 TOTAL 값
+    4. 재정 (Funding) - "STUDENT'S FUNDING"의 TOTAL 값
+    5. 시작일 (Start Date) - "START OF CLASSES"
+    
+    규칙:
+    - 반드시 원문 영어 사용
+    - 정확한 키워드 기반으로 찾기 (추측 금지)
+    
+    [질문 유형 선택]
+    다음 중 하나 선택: Academic / Financial / Intent / Background
+    - 이전 질문과 다른 유형 선택
+    
+    [정보 사용 규칙]
+    - Academic → Major, University 사용
+    - Financial → Cost, Funding 사용
+    - Intent → 미래 계획
+    - Background → 동기
+
     [핵심 규칙]
-    - 반드시 영어로 1~2문장 질문 1개만 출력하세요.
-    - 지원자 정보(전공, 학교 등)를 실제 질문에 포함하여 구체적으로 물어보세요.
-    - 이전과 중복된 질문은 피하세요.
+    - 질문은 영어로 1~2문장으로 간결하게 작성하세요.
+    - 참고 질문은 오직 "문장 구조"만 참고하세요.
+    - 반드시 지원자 정보의 실제 내용을 사용해서 질문을 생성하세요.
+    - 지원자는 학교에 합격한 상태이지, 학교를 다닌 경험은 없습니다.
+    - 이전 인터뷰의 질문과 같은 질문은 하지 않습니다.
+    - 이전 인터뷰의 답변에 이어지는 꼬리질문은 금지합니다.
+    - 없는 정보는 생성하지 않습니다.
+    - 정보 추출 결과는 절대 출력하지 마세요.
+    - 최종 출력은 반드시 질문 1개 문장만 작성하세요.
+
+    [절대 규칙 - 반드시 지켜야 함]
+    - 이전 인터뷰를 참고해 질문 유형은 매 질문마다 바뀌어야 함
+    - placeholder 절대 사용 금지
+    - 정보를 모르거나 찾을 수 없으면 아래 대체 표현을 사용하세요:
+    - 지원자 이름 → "you"
+    - 학비/비용 → "your tuition"
+    - 재정 지원 → "your funding"
+    - 시작일 → "your program start date"
+    - 학위 → "your degree"
+    - 지도교수 → "your advisor"
+    - 수업 기간 → "your program duration"
+    - 영어 점수 → "your English proficiency"
+    - 비자 기간 → "your visa period"
+    - 졸업 후 계획 → "your post-graduation plans"
+    - 본국 → "your home country"
+    - 스폰서/보증인 → "your sponsor"
     """
     
     question = llm.invoke(question_prompt).content.strip()
-    
-    # 4. 음성 파일 생성 (매번 덮어쓰기)
     text_to_speech(question, "question.mp3")
-    
     return question
-
 def get_final_evaluation(profile_context, history):
     """
     인터뷰 종료 후 최종 평가 텍스트 생성 함수
