@@ -361,6 +361,14 @@ RAG 및 데이터 추출 성능: 펜실베니아 대학교의 학비($81,990)와
 
 
 ## 12. 💻 수행결과
+- 서비스 메인 
+<img width="930" height="427" alt="결과물 1" src="https://github.com/user-attachments/assets/0318e041-bc4b-4237-b26a-18d3864d61e0" />
+
+- 서비스 1 구현 
+<img width="918" height="525" alt="서비스1" src="https://github.com/user-attachments/assets/40cc5108-7603-463d-9765-33da276ff0ff" />
+
+- 서비스 2 구현 
+<img width="1088" height="510" alt="서비스2" src="https://github.com/user-attachments/assets/cce80533-53e2-4709-a81e-29f03aca7f8d" />
 
 
 
